@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: taotao-manager
+server:
+  port: 8081
+
+eureka:
+  client:
+    region: taotaoEureka
+    availability-zones:
+      taotaoEureka: node1,node2
+    service-url:
+      node1: "http://taotao-eureka-node1:8001/eureka/"
+      node2: "http://taotao-eureka-node2:8002/eureka/"
+  instance:
+    prefer-ip-address: true
